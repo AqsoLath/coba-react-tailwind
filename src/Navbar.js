@@ -41,10 +41,7 @@ function Navbar() {
                             <h1 className="bold text-2xl text-emas1">
                                 Aqs0GG.com
                             </h1>
-                            <div className="my-auto">
-                                <TombolMasuk>DAFTAR</TombolMasuk>
-                                <TombolDaftar >MASUK</TombolDaftar>
-                            </div>
+
                         </div>
                         <div>
                             <button className="block md:hidden text-putih ml-4 text-2xl" id="hamburger" onClick={navEventHandler}>
@@ -52,8 +49,12 @@ function Navbar() {
                             </button>
                         </div>
                     </div>
-                    <div className="w-full hidden md:block" id="nav-links">
-                        <div className="flex flex-col md:flex-row py-2 border-t-2 border-t-emas1 md:border-t-0 text-left text-md justify-evenly">
+                    <div className="w-full hidden md:flex border-t-2 border-t-emas1 md:border-t-0 pt-3 md:pt-0" id="nav-links">
+                        <div className="my-auto">
+                            <TombolDaftar >DAFTAR</TombolDaftar>
+                            <TombolMasuk>MASUK</TombolMasuk>
+                        </div>
+                        <div className="flex flex-col md:flex-row py-2  text-left text-md justify-evenly">
                             <Link to="/" className="mx-3 text-emas2 hover:text-yellow-600 transition font-semibold py-1">
                                 Home
                             </Link>

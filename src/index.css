@@ -4,6 +4,15 @@
 
 @layer components {
   body {
-    @apply bg-hitam2;
+    @apply bg-hitam2 text-putih;
   }
+
+  .input {
+    @apply w-full rounded border-2 border-emas2 text-hitam1 p-1;
+  }
+
+  .subjudul {
+    @apply text-center text-xl font-semibold text-emas2;
+  }
+
 }
