@@ -2,7 +2,7 @@
 import TombolMasuk, { TombolDaftar } from './comp_general/Tombol';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faHouse, faDownload, faUser, faTags, faMessage } from '@fortawesome/free-solid-svg-icons';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
