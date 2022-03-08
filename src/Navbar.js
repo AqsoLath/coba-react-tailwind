@@ -1,18 +1,26 @@
-// import { Link } from 'react-router-dom'
 import TombolMasuk, { TombolDaftar } from './comp_general/Tombol';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faHouse, faDownload, faUser, faTags, faMessage } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react'
 
 
 
 function Navbar() {
 
+    const [isNavbarOn, setIsNavbarOn] = useState(false);
+    const location = useLocation();
+
+    useEffect(function () {
+        setIsNavbarOn(false)
+    }, [location]);
+
     function navEventHandler() {
-        const navLinks = document.querySelector("#nav-links");
+        !isNavbarOn ? setIsNavbarOn(true) : setIsNavbarOn(false);
+        // const navLinks = document.querySelector("#nav-links");
         // const navCover = document.querySelector("#nav-cover")
 
-        navLinks.classList.toggle('hidden');
+        // navLinks.classList.toggle('hidden');
         // navCover.classList.toggle('hidden');
 
         document.addEventListener('click', function (event) {
@@ -49,7 +57,7 @@ function Navbar() {
                             </button>
                         </div>
                     </div>
-                    <div className="w-full hidden md:flex border-t-2 border-t-emas1 md:border-t-0 pt-3 md:pt-0" id="nav-links">
+                    <div className={!isNavbarOn ? 'w-full hidden md:flex border-t-2 border-t-emas1 md:border-t-0 pt-3 md:pt-0' : " w-full md:flex border-t-2 border-t-emas1 md:border-t-0 pt-3 md:pt-0 "} id="nav-links" >
                         <div className="my-auto">
                             <TombolDaftar >DAFTAR</TombolDaftar>
                             <TombolMasuk>MASUK</TombolMasuk>
@@ -75,7 +83,7 @@ function Navbar() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
