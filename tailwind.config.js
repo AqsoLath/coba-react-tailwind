@@ -12,6 +12,11 @@ module.exports = {
         'putih': "#d6d6d6",
 
     },
+
+    fontFamily:{
+      abel: "'abel', sans-serif",
+    }
+
     },
   },
   plugins: [],

@@ -4,6 +4,8 @@ import Home from './Home'
 import About from './About'
 import Masuk from './Masuk'
 import Daftar from './Daftar';
+import Promo from './Promo';
+import PromoDetail from './PromoDetail';
 import Navbar, {NavbarBawah} from './Navbar'
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
           <Route path='/about' element={<About/>} />
           <Route path='/masuk' element={<Masuk/>} />
           <Route path='/daftar' element={<Daftar/>} />
+          <Route path='/promo' element={<Promo/>} />
+          <Route path='/promo/:title' element={<PromoDetail/>} />
         </Routes>
       <NavbarBawah />
     </div>

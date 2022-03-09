@@ -2,7 +2,7 @@
 export default function Games() {
     return (
         <div className=" mt-20">
-            <h2 className="text-3xl font-bold text-center bg-gradient-to-b from-emas1 via-emas2 to-emas1 py-2 ">Game Populer</h2>
+            <h2 className="text-3xl text-hitam1 font-bold text-center bg-gradient-to-b from-emas1 via-emas2 to-emas1 py-2 ">Game Populer</h2>
             <div className="container mx-auto">
 
                 <div className="grid grid-cols-3 lg:grid-cols-6 gap-2 mt-2">
